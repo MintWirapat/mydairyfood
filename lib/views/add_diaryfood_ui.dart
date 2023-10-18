@@ -1,5 +1,5 @@
 //add_diaryfoo_ui.dart
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -256,28 +256,44 @@ class _AddDiaryfoodUIState extends State<AddDiaryfoodUI> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Radio(
-                    onChanged: (value) {},
+                    onChanged: (int? value) {
+                      setState(() {
+                        meal =value!;
+                      });
+                    },
                     value: 1,
                     groupValue: meal,
                     activeColor: Colors.green,
                   ),
                   Text('เช้า'),
                   Radio(
-                    onChanged: (value) {},
+                    onChanged: (int? value) {
+                      setState(() {
+                        meal =value!;
+                      });
+                    },
                     value: 2,
                     groupValue: meal,
                     activeColor: Colors.green,
                   ),
                   Text('กลางวัน'),
                   Radio(
-                    onChanged: (value) {},
+                    onChanged: (int? value) {
+                      setState(() {
+                        meal =value!;
+                      });
+                    },
                     value: 3,
                     groupValue: meal,
                     activeColor: Colors.green,
                   ),
                   Text('เย็น'),
                   Radio(
-                    onChanged: (value) {},
+                    onChanged: (int? value) {
+                      setState(() {
+                        meal =value!;
+                      });
+                    },
                     value: 4,
                     groupValue: meal,
                     activeColor: Colors.green,
@@ -369,8 +385,16 @@ class _AddDiaryfoodUIState extends State<AddDiaryfoodUI> {
                   child: DropdownButton(
                     isExpanded: true,
                     items: items,
-                    onChanged: (value) {},
+                    onChanged: (String? value) {
+                      setState(() {
+                        foodProvince = value!;
+                      });
+                    },
                     value: foodProvince,
+                    underline: SizedBox(),
+                    style: GoogleFonts.kanit(
+                      color: Colors.grey[800],
+                    ),
                   ),
                 ),
               ),
