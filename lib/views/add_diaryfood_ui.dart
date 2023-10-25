@@ -425,11 +425,10 @@ class _AddDiaryfoodUIState extends State<AddDiaryfoodUI> {
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.green),
                   ),
-                  child: GoogleMap(
-                    initialCameraPosition: CameraPosition(
-                      target: LatLng(0.0, 0.0),
-                      zoom: 12.0,
-                    ),
+                  child: Image.asset(
+                    'assets/images/map.png',
+                    fit: BoxFit.cover,
+
                   ),
                 ),
               ),
